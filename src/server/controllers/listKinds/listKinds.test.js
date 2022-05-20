@@ -23,13 +23,4 @@ describe("Given listKind controller", () => {
       expect(res.json).toHaveBeenCalledWith(mockList);
     });
   });
-
-  describe("When it's called and receives a request and the find method return an empty array", () => {
-    test("Then it should call the res method status code 404", async () => {
-      const next = jest.fn();
-      await listKinds(null, null, next);
-
-      expect(next).toHaveBeenCalled();
-    });
-  });
 });
