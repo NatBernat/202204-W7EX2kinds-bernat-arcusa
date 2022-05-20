@@ -1,10 +1,9 @@
 const mockList = require("../../mocks/mockList");
-const listKinds = require("./listKinds");
+const listKinds = require("./kindsControllers");
 
 jest.mock("../../../database/models/Kind", () => ({
   find: jest.fn().mockResolvedValue(mockList),
 }));
-
 describe("Given listKind controller", () => {
   describe("When it's called and receives a request", () => {
     const res = {
